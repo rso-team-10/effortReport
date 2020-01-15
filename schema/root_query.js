@@ -19,6 +19,7 @@ const rootQuery = new GraphQLObjectType({
       resolve(_, {userID}) {
        return axios
          .get(`daily-reports-node-mongo` + userID)
+         .then(console.log("Request for report with userID:" + userID))
          .then(response => response.data);
       }
     },
@@ -30,6 +31,7 @@ const rootQuery = new GraphQLObjectType({
         resolve(_, {userID}) {
          return axios
            .get(`time-counter-app` + userID)
+           .then(console.log("Request for hours with userID:" + userID))
            .then(response => [response.data]);
         }
       }
