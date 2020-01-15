@@ -7,7 +7,7 @@ const schema = require('./schema');
 const app = express();
 
 // testing purposes, remove in production
-app.get('/playground', expressPlayground({ endpoint: '/v1/graphql' }));
+app.get('/playground', expressPlayground({ endpoint: '/effortReport/v1/graphql' }));
 
 app.use(bodyParser.json());
 app.use(
