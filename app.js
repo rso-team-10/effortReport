@@ -6,11 +6,13 @@ const cors = require('cors');
 const schema = require('./schema');
 const app = express();
 
+app.use(cors())
+
 // testing purposes, remove in production
 app.get('/playground', expressPlayground({ endpoint: '/effortReport/v1/graphql' }));
 
 app.use(bodyParser.json());
-app.use(cors())
+
 app.use(
   '/v1/graphql',
   expressGraphQL({
