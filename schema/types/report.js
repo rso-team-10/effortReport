@@ -12,7 +12,7 @@ const Report = new GraphQLObjectType({
     //id: { type: GraphQLString },
     //userID: { type: GraphQLString },
     reportDate: { type: GraphQLString },
-    //reportBody: { type: GraphQLString },
+    reportBody: { type: GraphQLString },
     projectName: { type: GraphQLString }
   })
 });
